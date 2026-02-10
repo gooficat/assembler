@@ -1,49 +1,33 @@
 .text
+
 .globl main
 
-.include "reg.inc"
-.include "tok.inc"
+.include "reg_tbl.inc"
 
+.intel_syntax noprefix
 
 main:
-	sub $TOK_STRM_LEN+4, %rsp
-	mov %rsp, %r13
+    sub rsp, 40
 
-	call greet
+    lea rcx, test_reg[rip]
+    lea rdx, regs[rip]
+    lea r8, end_of_regs[rip]
+    mov r9, reg_tbl_entry_sz
+    call sch_tbl
 
-	lea test_path(%rip), %rcx
-	call tok_open
-	
-	add $TOK_STRM_LEN+4, %rsp
+    lea rcx, test_fmt[rip]
+    mov rdx, reg_tbl_entry_name[rax]
+    mov r8, reg_tbl_entry_code[rax]
+    call printf
 
-	xor %eax, %eax
-	ret
+    add rsp, 40
 
-greet:
-	sub $32, %rsp
-	lea msg(%rip), %rcx
-	call puts
-	add $32, %rsp
-	ret
+    xor eax, eax
+
+    ret
 
 .data
-msg:
-	.asciz "Hello"
 
-test_reg:
-	.asciz "rsp"
+test_reg: .asciz "rax"
 
-test_ins_mnem:
-	.asciz "ret"
-
-test_ins:
-	.asciz "add rax, rcx"
-
-reg_fmt:
-	.asciz "reg '%02hhx'\n"
-
-ins_fmt:
-	.asciz "ins '%s'\n"
-
-test_path:
-	.asciz "../src/tok.s"
+test_fmt: .asciz "'%s' '%02hhX'"
