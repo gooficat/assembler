@@ -6,7 +6,7 @@
 
 
 main:
-	sub $TOK_STRM_LEN, %rsp
+	sub $TOK_STRM_LEN+4, %rsp
 	mov %rsp, %r13
 
 	call greet
@@ -33,7 +33,8 @@ main:
 
 	// call printf
 
-	add $TOK_STRM_LEN, %rsp
+	add $TOK_STRM_LEN+4, %rsp
+
 	xor %eax, %eax
 	ret
 
