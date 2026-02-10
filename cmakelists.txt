@@ -3,6 +3,8 @@ project(assembler)
 
 enable_language(ASM)
 
+include_directories(src)
+
 file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS src/*)
 
 add_executable(assembler ${SRCS})
