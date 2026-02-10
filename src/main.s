@@ -28,9 +28,10 @@ greet:
 	call puts
 	add $32, %rsp
 	ret
+
+.data
 msg:
 	.asciz "Hello"
-
 
 test_reg:
 	.asciz "rsp"
