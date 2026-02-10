@@ -13,26 +13,7 @@ main:
 
 	lea test_path(%rip), %rcx
 	call tok_open
-
-	// lea test_reg(%rip), %rcx
-	// call find_reg
 	
-
-	// lea reg_fmt(%rip), %rcx
-	
-    // movzb 8(%rax), %rdx
-	
-	// call printf
-
-
-	// lea test_ins_mnem(%rip), %rcx
-	// call find_ins_class
-
-	// lea ins_fmt(%rip), %rcx
-	// mov (%rax), %rdx
-
-	// call printf
-
 	add $TOK_STRM_LEN+4, %rsp
 
 	xor %eax, %eax
