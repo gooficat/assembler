@@ -14,7 +14,7 @@ main:
 	sub $32, %rsp
 	lea reg_fmt(%rip), %rcx
 	
-    movzb 9(%rax), %rdx
+    movzb 8(%rax), %rdx
 	
 	call printf
 	add $32, %rsp
@@ -33,7 +33,7 @@ msg:
 
 
 test_reg:
-	.asciz "es"
+	.asciz "rsp"
 
 reg_fmt:
 	.asciz "reg '%02hhx'\n"
