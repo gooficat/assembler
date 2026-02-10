@@ -10,28 +10,30 @@ main:
 	lea test_reg(%rip), %rcx
 	call find_reg
 	
-    mov %rax, %rdx
 
-	sub $40, %rsp
+	sub $32, %rsp
 	lea reg_fmt(%rip), %rcx
+	
+    movzb 9(%rax), %rdx
+	
 	call printf
-	add $40, %rsp
+	add $32, %rsp
 
 	xor %eax, %eax
 	ret
 
 greet:
-	sub $40, %rsp
+	sub $32, %rsp
 	lea msg(%rip), %rcx
 	call puts
-	add $40, %rsp
+	add $32, %rsp
 	ret
 msg:
 	.asciz "Hello"
 
 
 test_reg:
-	.asciz "rcx"
+	.asciz "es"
 
 reg_fmt:
-	.asciz "reg %02hhx\n"
+	.asciz "reg '%02hhx'\n"

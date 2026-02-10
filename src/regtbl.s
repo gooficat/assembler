@@ -35,6 +35,25 @@ ebp: .asciz "ebp"
 esi: .asciz "esi"
 edi: .asciz "rdi"
 
+al: .asciz "al"
+cl: .asciz "cl"
+dl: .asciz "dl"
+bl: .asciz "bl"
+
+ah: .asciz "ah"
+ch: .asciz "ch"
+dh: .asciz "dh"
+bh: .asciz "bh"
+
+es: .asciz "es"
+cs: .asciz "cs"
+ss: .asciz "ss"
+ds: .asciz "ds"
+fs: .asciz "fs"
+gs: .asciz "gs"
+
+
+
 registers:
 
 / 64 bit
@@ -172,4 +191,60 @@ registers:
 .byte Reg16
 
 / 8 bit
+.quad al
+.byte 0x00
+.byte Reg8
+
+.quad cl
+.byte 0x01
+.byte Reg8
+
+.quad dl
+.byte 0x02
+.byte Reg8
+
+.quad bl
+.byte 0x03
+.byte Reg8
+
+.quad ah
+.byte 0x04
+.byte Reg8
+
+.quad ch
+.byte 0x05
+.byte Reg8
+
+.quad dh
+.byte 0x06
+.byte Reg8
+
+.quad bh
+.byte 0x07
+.byte Reg8
+
+.quad es
+.byte 0x00
+.byte SReg
+
+.quad cs
+.byte 0x01
+.byte SReg
+
+.quad ss
+.byte 0x02
+.byte SReg
+
+.quad ds
+.byte 0x03
+.byte SReg
+
+.quad fs
+.byte 0x04
+.byte SReg
+
+.quad gs
+.byte 0x05
+.byte SReg
+
 end_of_registers:
