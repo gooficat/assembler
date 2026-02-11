@@ -8,14 +8,15 @@
 sch_tbl:
 	push r12
 	push r13
+tbl_sch_lp:
 	mov r10, rcx
 	mov r11, [rdx]
 str_cmp_lp:
-	movzx r12, byte ptr [r10]
-	movzx r13, byte ptr [r11]
-	cmp r12, r13
+	mov r12b, byte ptr [r10]
+	mov r13b, byte ptr [r11]
+	cmp r12b, r13b
 	jne no_match
-	cmp r13, 0
+	cmp r13b, 0
 	je match
 	inc r10
 	inc r11
@@ -23,7 +24,7 @@ str_cmp_lp:
 no_match:
 	add rdx, r9
 	cmp rdx, r8
-	jne sch_tbl
+	jne tbl_sch_lp
 	sub rsp, 40
 	mov rdx, rcx
 	lea rcx, error_msg[rip]

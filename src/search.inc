@@ -1,0 +1,1 @@
+.extern sch_tbl
