@@ -1,6 +1,6 @@
 AS := as
 LD := ld
-ASFLAGS := 
+ASFLAGS := -g
 LDFLAGS := -e main
 TARGET := assembler
 

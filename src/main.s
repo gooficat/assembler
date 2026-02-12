@@ -2,11 +2,22 @@
 
 .globl main
 
+.include "src/search.inc"
+.include "src/reg.inc"
+
 main:
-    mov $1, %rax
+    lea test_mnem(%rip), %rcx
+    call strlen
+    push %rax
+
+    lea test_mnem(%rip), %rcx
+    call find_reg
+
     mov $1, %rdi
-    mov $msg, %rsi
-    mov $msg_len, %rdx
+    lea (%rax), %rsi
+    mov (%rsi), %rsi
+    mov $1, %rax
+    pop %rdx
     syscall
 
     mov $60, %rax
@@ -15,6 +26,5 @@ main:
 
 .data
 
-msg:
-    .ascii "Hello\n"
-    .equ msg_len, . - msg
+
+test_mnem: .asciz "rax"
