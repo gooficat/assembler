@@ -5,6 +5,6 @@ enable_language(ASM)
 
 include_directories(src)
 
-file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS src/*)
+file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS src/*.s)
 
 add_executable(assembler ${SRCS})

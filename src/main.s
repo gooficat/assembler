@@ -19,7 +19,6 @@ main:
     ret
 
 .data
-
-test_reg: .asciz "rsp"
-
-test_fmt: .asciz "'%s' '%02hhX'"
+    test_reg: .asciz "rsp"
+    test_mnem: .asciz "add"
+    test_fmt: .asciz "'%s' '%02hhX'"

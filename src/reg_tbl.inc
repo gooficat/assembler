@@ -1,5 +1,6 @@
 .extern regs, end_of_regs
 
+# struct representation for register table entries
 .equ reg_tbl_entry_name, 0
 .equ reg_tbl_entry_code, reg_tbl_entry_name+8
 .equ reg_tbl_entry_type, reg_tbl_entry_code+1
