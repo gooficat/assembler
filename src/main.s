@@ -2,22 +2,19 @@
 
 .globl main
 
-.include "reg.inc"
-
-
 main:
-    lea test_reg(%rip), %rcx
-    call find_reg
-    lea test_fmt(%rip), %rcx
-    mov reg_tbl_entry_name(%rax), %rdx
-    movzb reg_tbl_entry_code(%rax), %r8
-    sub $40, %rsp
-    call printf
-    add $40, %rsp
-    xor %eax, %eax
-    ret
+    mov $1, %rax
+    mov $1, %rdi
+    mov $msg, %rsi
+    mov $msg_len, %rdx
+    syscall
+
+    mov $60, %rax
+    xor %rdi, %rdi
+    syscall
 
 .data
-    test_reg: .asciz "rsp"
-    test_mnem: .asciz "add"
-    test_fmt: .asciz "'%s' '%02hhX'"
+
+msg:
+    .ascii "Hello\n"
+    .equ msg_len, . - msg
