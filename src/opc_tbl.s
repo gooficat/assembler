@@ -6,14 +6,15 @@
 
 add: .asciz "add"
 ret: .asciz "ret"
+mov: .asciz "mov"
 
 mnems:
     .quad add
     .quad addclass
     .quad ret
     .quad retclass
-#    .quad mov
-#    .quad movclass
+    .quad mov
+    .quad movclass
 end_of_mnems:
 
 addclass:
@@ -48,3 +49,17 @@ retclass:
     .long Imm16
     .byte 1
     .byte 0xC2
+movclass:
+    .word Mode16|Mode32|Mode64
+    .byte 2
+    .long Reg8
+    .long Imm8
+    .byte 1
+    .byte 0xB0
+    
+    .word Mode16|Mode32|Mode64|Rex64
+    .byte 2
+    .long Reg16|Reg32|Reg64
+    .long Imm16|Imm32|Imm64
+    .byte 1
+    .byte 0xB8

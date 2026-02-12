@@ -12,20 +12,31 @@
 .equ Imm16, 1<<1
 .equ Imm32, 1<<2
 .equ Imm64, 1<<3
+.equ Imm8S, 1<<4
+.equ Imm32S, 1<<5
 
-.equ Reg8, 1<<4
-.equ Reg16, 1<<5
-.equ Reg32, 1<<6
-.equ Reg64, 1<<7
-.equ SReg, 1<<8
+.equ Reg8, 1<<6
+.equ Reg16, 1<<7
+.equ Reg32, 1<<8
+.equ Reg64, 1<<9
+.equ SReg, 1<<10
 # TODO fp regs next .equ 
 
-.equ FixedReg, 1<<9 # like accumulator forms
+.equ FixedReg, 1<<11 # like accumulator forms
 
-.equ BasedMem, 1<<10
-.equ Disp8, 1<<11
-.equ Disp16, 1<<12
-.equ Disp32, 1<<13
-.equ Disp64, 1<<14
+.equ BasedMem, 1<<12
+.equ Disp8, 1<<13
+.equ Disp16, 1<<14
+.equ Disp32, 1<<15
+.equ Disp64, 1<<16
+.equ Disp8S, 1<<17
+.equ Disp32S, 1<<18
 
-.equ RegMem, 1<<15
+.equ RegMem, 1<<19
+
+.equ Byte, 1<<20
+.equ Word, 1<<21
+.equ DWord, 1<<22
+.equ QWord, 1<<23
+
+#

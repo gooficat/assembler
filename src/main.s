@@ -4,18 +4,17 @@
 
 .include "reg.inc"
 
-.intel_syntax noprefix
 
 main:
-    lea rcx, test_reg[rip]
+    lea test_reg(%rip), %rcx
     call find_reg
-    lea rcx, test_fmt[rip]
-    mov rdx, reg_tbl_entry_name[rax]
-    movzx r8, byte ptr reg_tbl_entry_code[rax]
-    sub rsp, 40
+    lea test_fmt(%rip), %rcx
+    mov reg_tbl_entry_name(%rax), %rdx
+    movzb reg_tbl_entry_code(%rax), %r8
+    sub $40, %rsp
     call printf
-    add rsp, 40
-    xor eax, eax
+    add $40, %rsp
+    xor %eax, %eax
     ret
 
 .data

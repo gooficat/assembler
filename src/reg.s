@@ -2,15 +2,14 @@
 
 .globl find_reg
 
-.intel_syntax noprefix
 
 .include "search.inc"
 .include "reg_tbl.inc"
 
 
 find_reg:
-    lea rdx, regs[rip]
-    lea r8, end_of_regs[rip]
-    mov r9, reg_tbl_entry_sz
+    lea regs(%rip), %rdx
+    lea end_of_regs(%rip), %r8
+    mov $reg_tbl_entry_sz, %r9
     call sch_tbl
     ret

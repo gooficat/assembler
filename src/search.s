@@ -1,42 +1,39 @@
 .text
 
-.intel_syntax noprefix
-
 .globl sch_tbl
 
 # string, table base, table end, element size
 sch_tbl:
-	push r12
-	push r13
+	push %r12
+	push %r13
 tbl_sch_lp:
-	mov r10, rcx
-	mov r11, [rdx]
+	mov %rcx, %r10
+	mov (%rdx), %r11
 str_cmp_lp:
-	mov r12b, byte ptr [r10]
-	mov r13b, byte ptr [r11]
-	cmp r12b, r13b
+	mov (%r10), %r12b
+	cmp %r12b, (%r11)
 	jne no_match
-	cmp r13b, 0
+	cmp $0, %r12b
 	je match
-	inc r10
-	inc r11
+	inc %r10
+	inc %r11
 	jmp str_cmp_lp
 no_match:
-	add rdx, r9
-	cmp rdx, r8
+	add %r9, %rdx
+	cmp %r8, %rdx
 	jne tbl_sch_lp
-	sub rsp, 40
-	mov rdx, rcx
-	lea rcx, error_msg[rip]
+	sub $40, %rsp
+	mov %rcx, %rdx
+	lea error_msg(%rip), %rcx
 	call printf
-	add rsp, 40
-	xor rdx, rdx
+	add $40, %rsp
+	xor %rdx, %rdx
 match:
-	mov rax, rdx
-	pop r13
-	pop r12
+	mov %rdx, %rax
+	pop %r13
+	pop %r12
 	ret
 
 .data
 error_msg:
-	.asciz "did not find %s in table\n"
+	.asciz "did not find '%s' in table\n"
