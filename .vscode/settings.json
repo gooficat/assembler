@@ -2,4 +2,5 @@
     "editor.indentSize": "tabSize",
     "editor.tabSize": 4,
     "editor.insertSpaces": false,
+    "makefile.configureOnOpen": false,
 }
