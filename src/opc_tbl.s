@@ -25,7 +25,7 @@ addclass:
 
     .word D|W|Mode16|Mode32|Mode64|Rex64
     .byte 2
-    .long Reg8|Reg16|Reg32|Reg64|Byte|Word|DWord|QWord|RegMem|Disp
+    .long Reg8|Reg16|Reg32|Reg64|Byte|Word|DWord|QWord|RegMem|Disp8|Disp16|Disp32|Disp32S
     .long Reg8|Reg16|Reg32|Reg64
     .byte 1
     .byte 0x00

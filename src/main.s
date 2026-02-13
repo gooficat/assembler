@@ -11,7 +11,7 @@ main:
     push %rax
 
     lea test_mnem(%rip), %rcx
-    call find_reg
+    call find_opc_class
 
     mov $1, %rdi
     lea (%rax), %rsi
@@ -26,5 +26,4 @@ main:
 
 .data
 
-
-test_mnem: .asciz "rax"
+test_mnem: .asciz "add"

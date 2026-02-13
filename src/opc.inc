@@ -1,6 +1,8 @@
 
 .extern mnem_tbl, mnem_tbl_end
 
+.equ mnem_tbl_entry_len, 8
+
 .include "src/reg.inc"
 
 .include "src/prm.inc"
