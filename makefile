@@ -1,7 +1,7 @@
 AS := as
 LD := ld
-ASFLAGS := -I./inc -g
-LDFLAGS := -g -e main
+ASFLAGS := -I./inc
+LDFLAGS := -e main
 TARGET := assembler
 
 SRC_DIR := src
