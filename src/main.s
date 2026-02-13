@@ -2,8 +2,8 @@
 
 .globl main
 
-.include "src/search.inc"
-.include "src/reg.inc"
+.include "search.inc"
+.include "reg.inc"
 
 main:
     lea test_mnem(%rip), %rcx

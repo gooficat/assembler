@@ -3,9 +3,9 @@
 
 .equ mnem_tbl_entry_len, 8
 
-.include "src/reg.inc"
+.include "reg.inc"
 
-.include "src/prm.inc"
+.include "prm.inc"
 
 
 .equ Mode16, 1<<0

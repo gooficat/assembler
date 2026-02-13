@@ -3,4 +3,11 @@
     "editor.tabSize": 4,
     "editor.insertSpaces": false,
     "makefile.configureOnOpen": false,
+    "makefile.launchConfigurations": [
+        {
+            "cwd": "/workspaces/assembler/bin",
+            "binaryPath": "/workspaces/assembler/bin/assembler",
+            "binaryArgs": []
+        }
+    ],
 }

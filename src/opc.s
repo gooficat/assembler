@@ -2,7 +2,7 @@
 
 .globl find_opc_class, find_opc
 
-.include "src/opc.inc"
+.include "opc.inc"
 
 # string: rcx
 find_opc_class:

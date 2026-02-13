@@ -2,8 +2,8 @@
 
 .globl mnem_tbl, mnem_tbl_end
 
-.include "src/prm.inc"
-.include "src/opc.inc"
+.include "prm.inc"
+.include "opc.inc"
 
 
 add: .asciz "add"

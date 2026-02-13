@@ -2,7 +2,7 @@
 
 .globl find_reg
 
-.include "src/reg.inc"
+.include "reg.inc"
 
 # address of string on rcx
 find_reg:

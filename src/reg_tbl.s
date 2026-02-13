@@ -2,7 +2,7 @@
 
 .globl reg_tbl, reg_tbl_end
 
-.include "src/reg.inc"
+.include "reg.inc"
 
 rax: .asciz "rax"
 rcx: .asciz "rcx"

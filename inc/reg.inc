@@ -1,7 +1,7 @@
 
 .extern reg_tbl, reg_tbl_end
 
-.include "src/prm.inc"
+.include "prm.inc"
 
 .equ reg_tbl_entry_len, 10
 

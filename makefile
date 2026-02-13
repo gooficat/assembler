@@ -1,7 +1,7 @@
 AS := as
 LD := ld
-ASFLAGS := -g
-LDFLAGS := -e main
+ASFLAGS := -I./inc -g
+LDFLAGS := -g -e main
 TARGET := assembler
 
 SRC_DIR := src
@@ -13,7 +13,7 @@ EXEC := $(BIN_DIR)/$(TARGET)
 SRCS := $(wildcard $(SRC_DIR)/*.s)
 OBJS := $(patsubst $(SRC_DIR)/%.s,$(OBJ_DIR)/%.o,$(SRCS))
 
-launch: $(EXEC) run
+all: $(EXEC) run
 
 run:
 	@./$(EXEC)
@@ -24,7 +24,7 @@ $(EXEC): $(OBJS)
 
 $(OBJ_DIR)/%.o: $(SRC_DIR)/%.s
 	@mkdir -p $(OBJ_DIR)
-	@$(AS) $(ASFLGAGS) -o $@ $<
+	@$(AS) $(ASFLAGS) -o $@ $<
 
 clean:
 	@rm -rf $(OBJ_DIR) $(BIN_DIR)
