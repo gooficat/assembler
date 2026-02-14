@@ -9,7 +9,7 @@
 
 # file path on rdi
 fstrm_open:
-	mov $2, %rsi # syscall_open
+	mov $2, %rax # syscall_open
 	mov $0, %rdx # O_RDONLY
 	push %rcx
 	syscall
