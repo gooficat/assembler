@@ -3,23 +3,23 @@
 .globl tok_strm_init, tok_strm_next, tok_strm_cont, tok_strm_rewind, tok_strm_close
 
 .include "tok.inc"
+.include "file.inc"
 
 # passed on rcx
 
 
 # move forward a char
 tok_strm_cont:
+	push %rcx
+	mov tok_strm_fstrm(%rcx), %rcx
+	pop %rcx
 	ret
 
 
-# file path on rdi
+# pointer to file stream on rdi
 tok_strm_init:
-	mov $0, %rsi
-	mov $0, %rdx # O_RDONLY
-	syscall
-	mov %rax, tok_strm_file(%rcx)
-
-
+	mov %rdi, tok_strm_fstrm(%rcx)
+	call tok_strm_cont
 
 	ret
 

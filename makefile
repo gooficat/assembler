@@ -1,7 +1,7 @@
 AS := as
 LD := ld
-ASFLAGS := -I./inc
-LDFLAGS := -e main
+ASFLAGS := --gdwarf-4 -g -I./inc
+LDFLAGS := -g -e main
 TARGET := assembler
 
 SRC_DIR := src
@@ -15,8 +15,11 @@ OBJS := $(patsubst $(SRC_DIR)/%.s,$(OBJ_DIR)/%.o,$(SRCS))
 
 all: $(EXEC) run
 
-run:
+run: $(EXEC)
 	@./$(EXEC)
+
+debug: $(EXEC)
+	@gdb -batch -ex run --args ./$(EXEC)
 
 $(EXEC): $(OBJS)
 	@mkdir -p $(BIN_DIR)

@@ -9,7 +9,7 @@ struc tok_strm {
 */
 
 .equ tok_strm_fstrm, 0
-.equ tok_strm_buff, tok_strm_fstrm + fstrm_size
+.equ tok_strm_buff, tok_strm_fstrm + 8
 .equ tok_strm_tokn, tok_strm_buff + 2
 .equ tok_strm_size, tok_strm_tokn + 32
 
