@@ -30,7 +30,12 @@ main:
     mov $1, %rdi
     mov fstrm_buffl(%rcx), %rdx
     lea fstrm_buffer(%rcx), %rsi
+    push %rcx
     syscall
+    pop %rcx
+
+    call fstrm_close
+
 
     mov $60, %rax
     xor %rdi, %rdi

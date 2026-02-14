@@ -1,7 +1,7 @@
 /* 
 struc frd_strm {
 	fdesc : 4 (long)
-	seeker : 8 (ptr)
+	seeker : 2 (short)
 	buffl : 8 (quad)
 	buffer : 256 (char[256])
 }
@@ -9,7 +9,7 @@ struc frd_strm {
 .equ fstrm_buff_len, 256
 
 .equ fstrm_fdesc, 0
-.equ fstrm_seeker, fstrm_fdesc + 4
+.equ fstrm_seeker, fstrm_fdesc + 2
 .equ fstrm_buffl, fstrm_seeker + 8
 .equ fstrm_buffer, fstrm_buffl + 8
 .equ fstrm_size, fstrm_buffer + fstrm_buff_len
