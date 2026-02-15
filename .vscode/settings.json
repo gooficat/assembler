@@ -1,14 +1,4 @@
 {
-    "editor.indentSize": "tabSize",
-    "editor.tabSize": 4,
+    "files.insertFinalNewline": true,
     "editor.insertSpaces": false,
-    "makefile.configureOnOpen": false,
-    "makefile.launchConfigurations": [
-        {
-            "cwd": "/workspaces/assembler/bin",
-            "binaryPath": "/workspaces/assembler/bin/assembler",
-            "binaryArgs": []
-        }
-    ],
-    "files.insertFinalNewline": true
 }

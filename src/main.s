@@ -1,43 +1,21 @@
-.text
+.section ".text"
 
 .globl main
 
-.include "file.inc"
+.include "token.inc"
 
 main:
-	mov %rsp, %rdi
-	sub $fstrm_size, %rsp
-	lea test_path(%rip), %rsi
-	push %rdi
-	call fstrm_open
-	pop %rdi
+    sub $tok_strm_size + 40, %rsp
 
-	// mov $1, %rax
-	// lea fstrm_buffer(%rdi), %rsi
-	// push %rdi
-	// mov fstrm_buffl(%rdi), %rdx
-	// mov $1, %rdi
-	// syscall
-	// pop %rdi
 
-	sub $1, %rsp
-	call fstrm_getc
-	mov %al, (%rsp)
+    lea 40(%rsp), %rcx
+    lea test_path(%rip), %rdx
+    call tok_strm_init
 
-	
-	mov $1, %rax
-	lea (%rsp), %rsi
-	push %rdi
-	mov $1, %rdx
-	mov $1, %rdi
-	syscall
-	pop %rdi
+    add $tok_strm_size + 40, %rsp
 
-	mov $60, %rax
-	xor %rdi, %rdi
-	syscall # return 0
+    xor %rax, %rax
+    ret
 
-.data
-test_mnem: .asciz "add"
-test_instr: .asciz "add rax, rcx"
-test_path: .asciz "asm/test.asm"
+
+test_path: .asciz "inc/token.inc"

@@ -1,0 +1,9 @@
+cmake_minimum_required(VERSION 3.10)
+project(assembler)
+enable_language(ASM)
+
+include_directories(inc)
+
+file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS src/*.s)
+
+add_executable(assembler ${SRCS})
