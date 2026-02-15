@@ -18,14 +18,14 @@ fstrm_open:
 	ret
 
 fstrm_getc:
-	incw fstrm_seeker(%rdi)
 	cmpw $fstrm_buff_len, fstrm_seeker(%rdi)
 	jne fstrm_getc_no_advance
 	call fstrm_advance
 fstrm_getc_no_advance:
 	lea fstrm_buffer(%rdi), %rax
-	add fstrm_buffl(%rdi), %rax
+	add fstrm_seeker(%rdi), %ax
 	movb (%rax), %al
+	incw fstrm_seeker(%rdi)
 	ret
 
 fstrm_advance:
