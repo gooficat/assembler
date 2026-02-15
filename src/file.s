@@ -1,50 +1,47 @@
 .text
 
-# ptr on rcx
-
 .include "file.inc"
 
 
 .globl fstrm_open, fstrm_getc, fstrm_close
 
-# file path on rdi
+# rdi: fstrm*, rsi: fpath*[]
 fstrm_open:
-	mov $2, %rax # syscall_open
-	mov $0, %rdx # O_RDONLY
-	push %rcx
+	mov $2, %rax
+	push %rdi
+	mov %rsi, %rdi
+	xor %rsi, %rsi
 	syscall
-	pop %rcx
-	mov %eax, fstrm_fdesc(%rcx)
-	call fstrm_incbuf
+	pop %rdi
+	mov %eax, fstrm_fdesc(%rdi)	
+	call fstrm_advance
 	ret
-
-fstrm_incbuf:
-	mov fstrm_fdesc(%rcx), %edi # fstrm.fd
-	lea fstrm_buffer(%rcx), %rsi # &fstrm.buffer[0]
-	mov %rsi, fstrm_seeker(%rcx) # fstrm.seeker = fstrm.buffer
-	mov $0, %rax # syscall_read
-	mov $fstrm_buff_len, %rdx # file
-	push %rcx # save fstrm
-	syscall # read
-	pop %rcx
-	mov %rax, fstrm_buffl(%rcx) # result
-	ret
-
 
 fstrm_getc:
-	incw fstrm_seeker(%rcx)
-	cmpw $fstrm_buff_len, fstrm_seeker(%rcx)
-	jne no_inc
-	call fstrm_incbuf
-no_inc:
-	lea fstrm_buffer(%rcx), %rax
-	add fstrm_seeker(%rcx), %rax
-	movzb (%rax), %rax
+	incw fstrm_seeker(%rdi)
+	cmpw $fstrm_buff_len, fstrm_seeker(%rdi)
+	jne fstrm_getc_no_advance
+	call fstrm_advance
+fstrm_getc_no_advance:
+	lea fstrm_buffer(%rdi), %rax
+	add fstrm_buffl(%rdi), %rax
+	movb (%rax), %al
 	ret
 
+fstrm_advance:
+	mov $0, %rax
+	push %rdi
+	lea fstrm_buffer(%rdi), %rsi
+	mov fstrm_fdesc(%rdi), %rdi
+	mov $fstrm_buff_len, %rdx
+	syscall
+	pop %rdi
+	mov %rax, fstrm_buffl(%rdi)
+	movw $0, fstrm_seeker(%rdi)
+	ret
 
 fstrm_close:
 	mov $3, %rax
-	mov fstrm_fdesc(%rcx), %rdi
+	mov fstrm_fdesc(%rdi), %rdi
 	syscall
 	ret
