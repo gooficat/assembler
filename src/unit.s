@@ -16,9 +16,11 @@ unit_assemble:
 	movb $UNIT_PASS_LABEL, 32 + unit_current_pass(%rsp)
 	jmp unit_assemble_pass_loop_entry
 unit_assemble_pass_loop:
-	# call tok_strm_rewind
+	lea 42(%rsp), %rcx
+	call tok_strm_rewind
 unit_assemble_pass_loop_entry:
 	lea 32(%rsp), %rcx
+	lea 42(%rsp), %rdx
 	call unit_pass
 	cmpb $UNIT_PASS_DONE, 32 + unit_current_pass(%rsp)
 	jne unit_assemble_pass_loop
@@ -38,7 +40,6 @@ unit_pass_current_switch1_align:
 	jmp unit_pass_current_eoswitch
 unit_pass_current_switch1_done:
 	movb $UNIT_PASS_DONE, unit_next_pass(%rcx)
-	# jmp unit_pass_current_eoswitch
 unit_pass_current_eoswitch:
 	mov unit_next_pass(%rcx), %al
 	mov %al, unit_current_pass(%rcx)

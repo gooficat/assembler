@@ -1,6 +1,6 @@
 .section ".text"
 .include "tok.inc"
-.globl tok_strm_init, tok_strm_next
+.globl tok_strm_init, tok_strm_next, tok_strm_rewind
 tok_strm_init:
 	sub $40, %rsp
 	mov %rcx, 32(%rsp)
@@ -51,6 +51,16 @@ tok_strm_getc:
 	call fgetc
 	mov 32(%rsp), %rcx
 	mov %eax, tok_strm_buff(%rcx)
+	add $40, %rsp
+	ret
+tok_strm_rewind:
+	sub $40, %rsp
+	mov %rcx, 32(%rsp)
+	mov tok_strm_file(%rcx), %rcx
+	call rewind
+	mov 32(%rsp), %rcx
+	call tok_strm_getc
+	call tok_strm_next
 	add $40, %rsp
 	ret
 .data
