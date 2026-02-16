@@ -88,4 +88,7 @@ tok_strm_rewind:
 .data
 
 fmode_rt:
-    .asciz "r"
+    .asciz "rt"
+
+
+// test_in_path: .asciz "C:/Users/User/Documents/assembler/tests/test1.s"

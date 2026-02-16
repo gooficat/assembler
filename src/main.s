@@ -5,16 +5,16 @@
 .include "unit.inc"
 
 main:
-    sub $8, %rsp
+    sub $40, %rsp
     lea test_in_path(%rip), %rcx
     lea test_out_path(%rip), %rdx
     call assemble
 
-    add $8, %rsp
+    add $40, %rsp
     xor %eax, %eax
     ret
 
 .data
 
-test_in_path: .asciz "../tests/test1.s"
-test_out_path: .asciz "../tests/test1.bin"
+test_in_path: .asciz "C:/Users/User/Documents/assembler/tests/test1.s"
+test_out_path: .asciz "C:/Users/User/Documents/assembler/tests/test1.bin"
