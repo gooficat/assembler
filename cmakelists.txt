@@ -1,13 +1,6 @@
-cmake_minimum_required(VERSION 3.10)
+cmake_minimum_required(VERSION 4.1)
 project(assembler)
 enable_language(ASM)
-
 include_directories(inc)
-
-file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS src/*.s)
-
+file(GLOB_RECURSE SRCS CONFIGURE_DEPENDS src/*)
 add_executable(assembler ${SRCS})
-
-set(CMAKE_BUILD_TYPE Debug)
-
-add_compile_options(-g -O0 -Wall)

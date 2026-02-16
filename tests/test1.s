@@ -1,1 +1,1 @@
-mov %rax, %rcx
+mov %rax, %rax
