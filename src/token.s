@@ -46,6 +46,7 @@ tok_strm_alnum_loop:
     jg tok_strm_done
     jmp tok_strm_alnum_loop
 tok_strm_not_alnum:
+    cmpl $-1, tok_strm_buffer(%rcx)
     je tok_strm_done
     mov %al, (%rsi)
     inc %rsi

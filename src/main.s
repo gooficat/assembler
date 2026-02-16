@@ -10,7 +10,6 @@ main:
     lea test_path(%rip), %rdx
     call tok_strm_init
 
-    call tok_strm_next
 
     mov %rcx, 72(%rsp)
     lea tok_strm_token(%rcx), %rcx

@@ -1,5 +1,3 @@
-glor = 32
-
 .extern tok_strm_init, tok_strm_next, tok_strm_close
 
 .equ tok_strm_file, 0
