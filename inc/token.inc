@@ -1,4 +1,4 @@
-.extern tok_strm_init, tok_strm_next, tok_strm_close
+.extern tok_strm_init, tok_strm_next, tok_strm_close, tok_strm_rewind
 
 .equ tok_strm_file, 0
 .equ tok_strm_buffer, tok_strm_file + 8

@@ -1,6 +1,6 @@
 .section ".text"
 
-.globl tok_strm_init, tok_strm_next, tok_strm_close
+.globl tok_strm_init, tok_strm_next, tok_strm_close, tok_strm_rewind
 
 .include "token.inc"
 
@@ -68,7 +68,22 @@ tok_strm_strip_whitespace_strip:
     jmp tok_strm_strip_whitespace_loop
 
 tok_strm_close:
+    mov tok_strm_file(%rcx), %rcx
+    sub $40, %rsp
+    call fclose
+    add $40, %rsp
+    ret
 
+tok_strm_rewind:
+    push %rcx
+    sub $32, %rsp
+    mov tok_strm_file(%rcx), %rcx
+    call rewind
+    add $32, %rsp
+    pop %rcx
+    call tok_strm_getc
+    call tok_strm_next
+    ret
 
 .data
 

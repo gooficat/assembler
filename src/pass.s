@@ -7,7 +7,7 @@
 .include "unit.inc"
 
 assemble:
-    sub $160, %rsp
+    sub $168, %rsp
 /*
 152: temp storage
 118: asm unit
@@ -24,15 +24,26 @@ assemble:
 	lea 74(%rsp), %rcx
 	call tok_strm_init
 
-	lea 74 + tok_strm_token(%rsp), %rcx
-	call puts
+	movb $ASM_PASS_LABEL, 118 + asm_unit_pass(%rsp)
+	jmp pass_loop
+	
+rept_pass:
+	lea 74(%rsp), %rcx
+	call tok_strm_rewind
 
-    add $160, %rsp
+pass_loop:
+	call handle_line
+	cmpb $0, 74 + tok_strm_buffer(%rsp)
+	jne pass_loop
+
+	cmpb $ASM_PASS_WRITE, 118 + asm_unit_pass(%rsp)
+	// jle rept_pass
+
+	call tok_strm_close
+    add $168, %rsp
 	ret
 
-asm_pass:
-	ret	
-
+handle_line:
 
 .data
 
