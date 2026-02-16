@@ -1,0 +1,1 @@
+.extern handle_directive

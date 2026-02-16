@@ -17,6 +17,7 @@ tok_strm_next:
 	sub $56, %rsp
 	mov %rcx, 32(%rsp)
 	mov %rsi, 40(%rsp)
+	call tok_strm_strip_whitespace
 	lea tok_strm_tokn(%rcx), %rsi
 	cmpl $'0', tok_strm_buff(%rcx)
 	jl tok_strm_next_not_alnum
@@ -63,6 +64,24 @@ tok_strm_rewind:
 	call tok_strm_next
 	add $40, %rsp
 	ret
+tok_strm_strip_whitespace:
+	sub $40, %rsp
+tok_strm_strip_whitespace_check:
+	cmpl $' ', tok_strm_buff(%rcx)
+	je tok_strm_strip_whitespace_strip
+	cmpl $'\t', tok_strm_buff(%rcx)
+	je tok_strm_strip_whitespace_strip
+	cmpl $'\n', tok_strm_buff(%rcx)
+	je tok_strm_strip_whitespace_strip
+	cmpl $'\b', tok_strm_buff(%rcx)
+	je tok_strm_strip_whitespace_strip
+	cmpl $'\r', tok_strm_buff(%rcx)
+	je tok_strm_strip_whitespace_strip
+	add $40, %rsp
+	ret
+tok_strm_strip_whitespace_strip:
+	call tok_strm_getc
+	jmp tok_strm_strip_whitespace_check
 .data
 fmode_rt:
 	.asciz "rt"
