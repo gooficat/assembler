@@ -50,7 +50,7 @@ tok_strm_getc:
 	mov tok_strm_file(%rcx), %rcx
 	call fgetc
 	mov 32(%rsp), %rcx
-	mov %ax, tok_strm_buff(%rcx)
+	mov %eax, tok_strm_buff(%rcx)
 	add $40, %rsp
 	ret
 .data
