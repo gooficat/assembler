@@ -4,7 +4,7 @@
 
 .globl vec_init, vec_resize_up
 
-# veC: rcx
+# vec: rcx
 vec_init:
 	push %rcx
 	sub $32, %rsp
