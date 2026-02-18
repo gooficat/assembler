@@ -26,7 +26,7 @@ ts_next:
 	mov qword ptr 32[rsp], rcx
 	call ts_strip_whitespace
 	mov eax, dword ptr ts_buff[rcx]
-	lea ts_token[rcx], rdx
+	lea rdx, qword ptr ts_token[rcx]
 	cmp eax, '0'
 	jl ts_next_not_alnum
 	cmp eax, 'z'
@@ -52,11 +52,24 @@ ts_next_alnum_done:
 
 ts_strip_whitespace:
 	sub rsp, 40
+ts_strip_whitespace_check:
 	mov 32[rsp], rcx
-	
+	cmp byte ptr ts_buff[rcx], ' '
+	je ts_strip_whitespace_strip
+	cmp byte ptr ts_buff[rcx], '\n'
+	je ts_strip_whitespace_strip
+	cmp byte ptr ts_buff[rcx], '\t'
+	je ts_strip_whitespace_strip
+	cmp byte ptr ts_buff[rcx], '\b'
+	je ts_strip_whitespace_strip
+	cmp byte ptr ts_buff[rcx], '\r'
+	je ts_strip_whitespace_strip
 	add rsp, 40
 	ret
-
+ts_strip_whitespace_strip:
+	call fgetc
+	mov rcx, 32[rsp]
+	jmp ts_strip_whitespace_check
 .data
 
 fmode_rt:
