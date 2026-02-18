@@ -15,6 +15,7 @@ main:
 	lea rdx, test_path[rip]
 	call ts_init
 
+
 	mov rcx, 32+ts_file[rsp]
 	call fclose
 
