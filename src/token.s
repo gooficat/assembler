@@ -29,6 +29,8 @@ ts_next:
 	mov rcx, qword ptr 32[rsp]
 	mov eax, dword ptr ts_buff[rcx]
 	lea rdx, qword ptr ts_token[rcx]
+	cmp eax, '_'
+	je ts_next_alnum_loop
 	cmp eax, '0'
 	jl ts_next_not_alnum
 	cmp eax, 'z'
@@ -41,10 +43,13 @@ ts_next_alnum_loop:
 	mov rcx, qword ptr 32[rsp]
 	mov rdx, qword ptr 40[rsp]
 	inc rdx
+	cmp eax, '_'
+	je ts_next_is_uscore2
 	cmp eax, '0'
 	jl ts_next_alnum_done
 	cmp eax, 'z'
 	jg ts_next_alnum_done
+ts_next_is_uscore2:
 	jmp ts_next_alnum_loop
 ts_next_not_alnum:
 	cmp eax, -1

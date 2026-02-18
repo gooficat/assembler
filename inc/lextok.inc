@@ -5,9 +5,10 @@
 .equ TokTypeNumber, 4
 .equ TokTypeMemory, 5
 
+.extern lexer_next
 
 /*
-struct lex_tok
+struct lexer
 {
 	u1 type;
 	union {
@@ -27,12 +28,13 @@ struct lex_tok
 }
 */
 
-.equ lex_tok_type, 0
-.equ lex_tok_reg1, 1
-.equ lex_tok_reg2, 9
-.equ lex_tok_scal, 10
-.equ lex_tok_disp_imm, 11
-.equ lex_tok_dir, 1
-.equ lex_tok_opc_class_ptr, 1
-.equ lex_tok_str, 19
-.equ lex_tok_struc_size, 27
+.equ lexer_type, 0
+.equ lexer_reg1, 1
+.equ lexer_reg2, 9
+.equ lexer_scal, 10
+.equ lexer_disp_imm, 11
+.equ lexer_dir, 1
+.equ lexer_opc_class_ptr, 1
+.equ lexer_str, 19
+.equ lexer_ts_ptr, lexer_str + 8
+.equ lexer_struc_size, lexer_ts_ptr + 8
