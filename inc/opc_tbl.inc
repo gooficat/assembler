@@ -1,4 +1,4 @@
-.extern opcode_classes
+.extern opcode_classes, opcode_classes_end
 
 .equ Mode16, 1
 .equ Mode32, 1<<1

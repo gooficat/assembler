@@ -1,1 +1,1 @@
-mov rax, rax
+add rax, rax

@@ -4,6 +4,7 @@
 
 .intel_syntax noprefix
 .include "token.inc"
+.include "opcode.inc"
 
 main:
 	sub rsp, 88
@@ -15,15 +16,14 @@ main:
 	lea rdx, qword ptr test_path[rip]
 	call ts_init
 
-print_strm_loop:
 	lea rcx, qword ptr 32[rsp]
 	call ts_next
 
 	lea rcx, qword ptr 32 + ts_token[rsp]
 	call puts
-	
-	cmp byte ptr 32 + ts_token[rsp], 0
-	jne print_strm_loop
+
+	lea rcx, qword ptr 32 + ts_token[rsp]
+	call find_opcode
 
 	mov rcx, qword ptr 32+ts_file[rsp]
 	call fclose
@@ -36,3 +36,4 @@ print_strm_loop:
 
 msg: .asciz "Hello"
 test_path: .asciz "../tests/test1.s"
+
