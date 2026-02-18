@@ -18,6 +18,7 @@ ts_init:
 	call fgetc
 	mov rcx, qword ptr 32[rsp]
 	mov dword ptr ts_buff[rcx], eax
+	// call ts_next
 	add rsp, 40
 	ret
 
@@ -32,21 +33,32 @@ ts_next:
 	cmp eax, 'z'
 	jg ts_next_not_alnum
 ts_next_alnum_loop:
+	mov dword ptr [rdx], eax
 	mov qword ptr 32[rsp], rcx
 	mov qword ptr 40[rsp], rdx
+	mov rcx, ts_file[rcx]
 	call fgetc
 	mov rcx, qword ptr 32[rsp]
 	mov rdx, qword ptr 40[rsp]
-ts_next_not_alnum:
+	cmp eax, '0'
+	jl ts_next_alnum_done
+	cmp eax, 'z'
+	jg ts_next_alnum_done
+	inc rdx
+	jmp ts_next_alnum_loop
 
+ts_next_not_alnum:
+	mov dword ptr [rdx], eax
 	mov qword ptr 32[rsp], rcx
 	mov qword ptr 40[rsp], rdx
+	mov rcx, ts_file[rcx]
 	call fgetc
 	mov rcx, qword ptr 32[rsp]
 	mov rdx, qword ptr 40[rsp]
 ts_next_alnum_done:
 	inc rdx
 	mov dword ptr [rdx], 0
+	mov dword ptr ts_buff[rcx], eax
 	add rsp, 56
 	ret
 

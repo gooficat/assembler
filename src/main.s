@@ -11,12 +11,17 @@ main:
 	lea rcx, qword ptr msg[rip]
 	call puts
 
-	lea rcx, 32[rsp]
-	lea rdx, test_path[rip]
+	lea rcx, qword ptr 32[rsp]
+	lea rdx, qword ptr test_path[rip]
 	call ts_init
 
+	lea rcx, qword ptr 32[rsp]
+	call ts_next
 
-	mov rcx, 32+ts_file[rsp]
+	lea rcx, qword ptr 32 + ts_token[rsp]
+	call puts
+
+	mov rcx, qword ptr 32+ts_file[rsp]
 	call fclose
 
 	add rsp, 88
