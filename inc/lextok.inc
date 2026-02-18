@@ -19,10 +19,7 @@ struct lexer
 			i16 disp_imm;
 		};
 		dir* dir;
-		struct {
-			u16 opc_idx;
-			u16 opc_num;
-		};
+		opc_class* opc_class;
 	};
 	char *str;
 }
@@ -30,11 +27,11 @@ struct lexer
 
 .equ lexer_type, 0
 .equ lexer_reg1, 1
-.equ lexer_reg2, 9
-.equ lexer_scal, 10
-.equ lexer_disp_imm, 11
+.equ lexer_reg2, lexer_reg1 + 8
+.equ lexer_scal, lexer_reg2 + 8
+.equ lexer_disp_imm, lexer_scal + 1
 .equ lexer_dir, 1
 .equ lexer_opc_class_ptr, 1
-.equ lexer_str, 19
+.equ lexer_str, 8 + 8 + 1 + 2 # (19)
 .equ lexer_ts_ptr, lexer_str + 8
 .equ lexer_struc_size, lexer_ts_ptr + 8

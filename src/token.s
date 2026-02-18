@@ -91,6 +91,7 @@ ts_strip_whitespace_strip:
 	call fgetc
 	mov rcx, qword ptr 32[rsp]
 	jmp ts_strip_whitespace_check
+
 .data
 
 fmode_rt:

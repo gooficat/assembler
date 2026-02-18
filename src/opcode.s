@@ -22,7 +22,6 @@ find_opcode_loop:
 	mov rcx, qword ptr 32[rsp]
 	cmp rsi, rax
 	jne find_opcode_loop
-
 	xor rax, rax
 	jmp find_opcode_none_found
 find_opcode_found:
