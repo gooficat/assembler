@@ -1,13 +1,28 @@
-.section ".text"
+.text
+
 .globl main
-.include "tok.inc"
+
+.intel_syntax noprefix
+.include "token.inc"
+
 main:
-    sub $40, %rsp
-    lea test_path(%rip), %rcx
-    call unit_assemble
-    add $40, %rsp
-    xor %eax, %eax
-    ret
-.section ".data"
-greet_msg: .asciz "Hello from gooficat's assembler!"
+	sub rsp, 88
+	
+	lea rcx, qword ptr msg[rip]
+	call puts
+
+	lea rcx, 32[rsp]
+	lea rdx, test_path[rip]
+	call ts_init
+
+	mov rcx, 32+ts_file[rsp]
+	call fclose
+
+	add rsp, 88
+	xor eax, eax
+	ret
+
+.data
+
+msg: .asciz "Hello"
 test_path: .asciz "../tests/test1.s"
