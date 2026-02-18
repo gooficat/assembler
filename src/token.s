@@ -26,6 +26,7 @@ ts_next:
 	sub rsp, 56
 	mov qword ptr 32[rsp], rcx
 	call ts_strip_whitespace
+	mov rcx, qword ptr 32[rsp]
 	mov eax, dword ptr ts_buff[rcx]
 	lea rdx, qword ptr ts_token[rcx]
 	cmp eax, '0'
@@ -33,54 +34,57 @@ ts_next:
 	cmp eax, 'z'
 	jg ts_next_not_alnum
 ts_next_alnum_loop:
-	mov dword ptr [rdx], eax
-	mov qword ptr 32[rsp], rcx
+	mov byte ptr [rdx], al
 	mov qword ptr 40[rsp], rdx
 	mov rcx, ts_file[rcx]
 	call fgetc
 	mov rcx, qword ptr 32[rsp]
 	mov rdx, qword ptr 40[rsp]
+	inc rdx
 	cmp eax, '0'
 	jl ts_next_alnum_done
 	cmp eax, 'z'
 	jg ts_next_alnum_done
-	inc rdx
 	jmp ts_next_alnum_loop
-
 ts_next_not_alnum:
-	mov dword ptr [rdx], eax
-	mov qword ptr 32[rsp], rcx
+	cmp eax, -1
+	je ts_next_alnum_done
+	mov byte ptr [rdx], al
 	mov qword ptr 40[rsp], rdx
 	mov rcx, ts_file[rcx]
 	call fgetc
 	mov rcx, qword ptr 32[rsp]
 	mov rdx, qword ptr 40[rsp]
-ts_next_alnum_done:
 	inc rdx
-	mov dword ptr [rdx], 0
+ts_next_alnum_done:
+	mov byte ptr [rdx], 0
 	mov dword ptr ts_buff[rcx], eax
 	add rsp, 56
 	ret
 
 ts_strip_whitespace:
 	sub rsp, 40
+	mov qword ptr 32[rsp], rcx
+	mov eax, dword ptr ts_buff[rcx]
 ts_strip_whitespace_check:
-	mov 32[rsp], rcx
-	cmp byte ptr ts_buff[rcx], ' '
+	cmp eax, ' '
 	je ts_strip_whitespace_strip
-	cmp byte ptr ts_buff[rcx], '\n'
+	cmp eax, '\n'
 	je ts_strip_whitespace_strip
-	cmp byte ptr ts_buff[rcx], '\t'
+	cmp eax, '\t'
 	je ts_strip_whitespace_strip
-	cmp byte ptr ts_buff[rcx], '\b'
+	cmp eax, '\b'
 	je ts_strip_whitespace_strip
-	cmp byte ptr ts_buff[rcx], '\r'
+	cmp eax, '\r'
 	je ts_strip_whitespace_strip
+	mov rcx, qword ptr 32[rsp]
+	mov dword ptr ts_buff[rcx], eax
 	add rsp, 40
 	ret
 ts_strip_whitespace_strip:
+	mov rcx, ts_file[rcx]
 	call fgetc
-	mov rcx, 32[rsp]
+	mov rcx, qword ptr 32[rsp]
 	jmp ts_strip_whitespace_check
 .data
 

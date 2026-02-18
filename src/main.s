@@ -15,11 +15,15 @@ main:
 	lea rdx, qword ptr test_path[rip]
 	call ts_init
 
+print_strm_loop:
 	lea rcx, qword ptr 32[rsp]
 	call ts_next
 
 	lea rcx, qword ptr 32 + ts_token[rsp]
 	call puts
+	
+	cmp byte ptr 32 + ts_token[rsp], 0
+	jne print_strm_loop
 
 	mov rcx, qword ptr 32+ts_file[rsp]
 	call fclose
