@@ -6,6 +6,7 @@ void token_stream_state_init(Token_Stream_State* state, const char* file_path) {
     fopen_s(&state->file, file_path, "r");
     state->line_number = 1;
     state->backtrace = NULL;
+    state->C = fgetc(state->file);
 }
 
 void token_stream_init(Token_Stream* stream, const char* file_path) {
