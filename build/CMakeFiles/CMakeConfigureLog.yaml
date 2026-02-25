@@ -43,6 +43,8 @@ events:
         - "C:\\Program Files\\GitHub CLI\\"
         - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
         - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\LLVM\\bin"
+        - "C:\\Users\\User\\.cargo\\bin"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
         - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -67,7 +69,7 @@ events:
       The output was:
       0
       MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
-      Build started 24/02/2026 12:44:49.
+      Build started 25/02/2026 23:16:56.
       
       Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\4.1.2-msvc8\\CompilerIdC\\CompilerIdC.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -96,7 +98,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:03.68
+      Time Elapsed 00:00:01.73
       
       
       Compilation of the C compiler identification source "CMakeCCompilerId.c" produced "CompilerIdC.exe"
@@ -137,6 +139,8 @@ events:
       - "C:/Program Files/GitHub CLI/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
       - "C:/Program Files/nodejs/"
+      - "C:/Program Files/LLVM/bin/"
+      - "C:/Users/User/.cargo/bin/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/"
       - "C:/Users/User/AppData/Local/Programs/Zed/bin/"
@@ -154,6 +158,8 @@ events:
         - "C:\\Program Files\\GitHub CLI\\"
         - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
         - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\LLVM\\bin"
+        - "C:\\Users\\User\\.cargo\\bin"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
         - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -193,6 +199,8 @@ events:
       - "C:/Program Files/GitHub CLI/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
       - "C:/Program Files/nodejs/"
+      - "C:/Program Files/LLVM/bin/"
+      - "C:/Users/User/.cargo/bin/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/"
       - "C:/Users/User/AppData/Local/Programs/Zed/bin/"
@@ -225,19 +233,8 @@ events:
       - "C:/Program Files/nodejs/lld-link.com"
       - "C:/Program Files/nodejs/lld-link.exe"
       - "C:/Program Files/nodejs/lld-link"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link.com"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link.exe"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/lld-link.com"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/lld-link.exe"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/lld-link"
-      - "C:/Users/User/AppData/Local/Programs/Zed/bin/lld-link.com"
-      - "C:/Users/User/AppData/Local/Programs/Zed/bin/lld-link.exe"
-      - "C:/Users/User/AppData/Local/Programs/Zed/bin/lld-link"
-      - "C:/Users/User/AppData/Roaming/npm/lld-link.com"
-      - "C:/Users/User/AppData/Roaming/npm/lld-link.exe"
-      - "C:/Users/User/AppData/Roaming/npm/lld-link"
-    found: false
+      - "C:/Program Files/LLVM/bin/lld-link.com"
+    found: "C:/Program Files/LLVM/bin/lld-link.exe"
     search_context:
       ENV{PATH}:
         - "C:\\Windows\\system32"
@@ -248,6 +245,8 @@ events:
         - "C:\\Program Files\\GitHub CLI\\"
         - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
         - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\LLVM\\bin"
+        - "C:\\Users\\User\\.cargo\\bin"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
         - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -285,6 +284,8 @@ events:
       - "C:/Program Files/GitHub CLI/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
       - "C:/Program Files/nodejs/"
+      - "C:/Program Files/LLVM/bin/"
+      - "C:/Users/User/.cargo/bin/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/"
       - "C:/Users/User/AppData/Local/Programs/Zed/bin/"
@@ -302,6 +303,8 @@ events:
         - "C:\\Program Files\\GitHub CLI\\"
         - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
         - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\LLVM\\bin"
+        - "C:\\Users\\User\\.cargo\\bin"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
         - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -339,6 +342,8 @@ events:
       - "C:/Program Files/GitHub CLI/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
       - "C:/Program Files/nodejs/"
+      - "C:/Program Files/LLVM/bin/"
+      - "C:/Users/User/.cargo/bin/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/"
       - "C:/Users/User/AppData/Local/Programs/Zed/bin/"
@@ -371,6 +376,12 @@ events:
       - "C:/Program Files/nodejs/mt.com"
       - "C:/Program Files/nodejs/mt.exe"
       - "C:/Program Files/nodejs/mt"
+      - "C:/Program Files/LLVM/bin/mt.com"
+      - "C:/Program Files/LLVM/bin/mt.exe"
+      - "C:/Program Files/LLVM/bin/mt"
+      - "C:/Users/User/.cargo/bin/mt.com"
+      - "C:/Users/User/.cargo/bin/mt.exe"
+      - "C:/Users/User/.cargo/bin/mt"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/mt.com"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/mt.exe"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/mt"
@@ -394,6 +405,8 @@ events:
         - "C:\\Program Files\\GitHub CLI\\"
         - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
         - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\LLVM\\bin"
+        - "C:\\Users\\User\\.cargo\\bin"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
         - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -431,6 +444,8 @@ events:
       - "C:/Program Files/GitHub CLI/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
       - "C:/Program Files/nodejs/"
+      - "C:/Program Files/LLVM/bin/"
+      - "C:/Users/User/.cargo/bin/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/"
       - "C:/Users/User/AppData/Local/Programs/Zed/bin/"
@@ -448,6 +463,8 @@ events:
         - "C:\\Program Files\\GitHub CLI\\"
         - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
         - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\LLVM\\bin"
+        - "C:\\Users\\User\\.cargo\\bin"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
         - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -491,6 +508,8 @@ events:
         - "C:\\Program Files\\GitHub CLI\\"
         - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
         - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\LLVM\\bin"
+        - "C:\\Users\\User\\.cargo\\bin"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
         - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -515,7 +534,7 @@ events:
       The output was:
       0
       MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
-      Build started 24/02/2026 12:44:55.
+      Build started 25/02/2026 23:16:59.
       
       Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\4.1.2-msvc8\\CompilerIdCXX\\CompilerIdCXX.vcxproj" on node 1 (default targets).
       PrepareForBuild:
@@ -544,7 +563,7 @@ events:
           0 Warning(s)
           0 Error(s)
       
-      Time Elapsed 00:00:03.04
+      Time Elapsed 00:00:01.91
       
       
       Compilation of the CXX compiler identification source "CMakeCXXCompilerId.cpp" produced "CompilerIdCXX.exe"
@@ -554,100 +573,6 @@ events:
       The CXX compiler identification is MSVC, found in:
         C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/4.1.2-msvc8/CompilerIdCXX/CompilerIdCXX.exe
       
-  -
-    kind: "find-v1"
-    backtrace:
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:37 (find_program)"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:65 (__resolve_tool_path)"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeFindBinUtils.cmake:104 (__resolve_linker_path)"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/share/cmake-4.1/Modules/CMakeDetermineCXXCompiler.cmake:206 (include)"
-      - "CMakeLists.txt:2 (project)"
-    mode: "program"
-    variable: "_CMAKE_TOOL_WITH_PATH"
-    description: "Path to a program."
-    settings:
-      SearchFramework: "NEVER"
-      SearchAppBundle: "NEVER"
-      CMAKE_FIND_USE_CMAKE_PATH: false
-      CMAKE_FIND_USE_CMAKE_ENVIRONMENT_PATH: false
-      CMAKE_FIND_USE_SYSTEM_ENVIRONMENT_PATH: true
-      CMAKE_FIND_USE_CMAKE_SYSTEM_PATH: true
-      CMAKE_FIND_USE_INSTALL_PREFIX: true
-    names:
-      - "lld-link"
-    candidate_directories:
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/"
-      - "C:/Windows/SysWOW64/"
-      - "C:/Windows/"
-      - "C:/Users/User/AppData/Local/Microsoft/WindowsApps/"
-      - "C:/Program Files/Neovim/bin/"
-      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/"
-      - "C:/Program Files/GitHub CLI/"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
-      - "C:/Program Files/nodejs/"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/"
-      - "C:/Users/User/AppData/Local/Programs/Zed/bin/"
-      - "C:/Users/User/AppData/Roaming/npm/"
-    searched_directories:
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.com"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link.exe"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/VC/Tools/MSVC/14.50.35717/bin/Hostx64/x64/lld-link"
-      - "C:/Windows/SysWOW64/lld-link.com"
-      - "C:/Windows/SysWOW64/lld-link.exe"
-      - "C:/Windows/SysWOW64/lld-link"
-      - "C:/Windows/lld-link.com"
-      - "C:/Windows/lld-link.exe"
-      - "C:/Windows/lld-link"
-      - "C:/Users/User/AppData/Local/Microsoft/WindowsApps/lld-link.com"
-      - "C:/Users/User/AppData/Local/Microsoft/WindowsApps/lld-link.exe"
-      - "C:/Users/User/AppData/Local/Microsoft/WindowsApps/lld-link"
-      - "C:/Program Files/Neovim/bin/lld-link.com"
-      - "C:/Program Files/Neovim/bin/lld-link.exe"
-      - "C:/Program Files/Neovim/bin/lld-link"
-      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.com"
-      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link.exe"
-      - "C:/Windows/SysWOW64/WindowsPowerShell/v1.0/lld-link"
-      - "C:/Program Files/GitHub CLI/lld-link.com"
-      - "C:/Program Files/GitHub CLI/lld-link.exe"
-      - "C:/Program Files/GitHub CLI/lld-link"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link.com"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link.exe"
-      - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/lld-link"
-      - "C:/Program Files/nodejs/lld-link.com"
-      - "C:/Program Files/nodejs/lld-link.exe"
-      - "C:/Program Files/nodejs/lld-link"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link.com"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link.exe"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/lld-link"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/lld-link.com"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/lld-link.exe"
-      - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/lld-link"
-      - "C:/Users/User/AppData/Local/Programs/Zed/bin/lld-link.com"
-      - "C:/Users/User/AppData/Local/Programs/Zed/bin/lld-link.exe"
-      - "C:/Users/User/AppData/Local/Programs/Zed/bin/lld-link"
-      - "C:/Users/User/AppData/Roaming/npm/lld-link.com"
-      - "C:/Users/User/AppData/Roaming/npm/lld-link.exe"
-      - "C:/Users/User/AppData/Roaming/npm/lld-link"
-    found: false
-    search_context:
-      ENV{PATH}:
-        - "C:\\Windows\\system32"
-        - "C:\\Windows"
-        - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Program Files\\Neovim\\bin"
-        - "C:\\Windows\\System32\\WindowsPowerShell\\v1.0"
-        - "C:\\Program Files\\GitHub CLI\\"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
-        - "C:\\Program Files\\nodejs\\"
-        - "C:\\Windows\\system32"
-        - "C:\\Windows"
-        - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
-        - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WinGet\\Packages\\PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe"
-        - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WinGet\\Links"
-        - "C:\\Users\\User\\AppData\\Local\\Programs\\Zed\\bin"
-        - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
-        - "C:\\Users\\User\\AppData\\Roaming\\npm"
   -
     kind: "find-v1"
     backtrace:
@@ -679,6 +604,8 @@ events:
       - "C:/Program Files/GitHub CLI/"
       - "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/Common7/IDE/CommonExtensions/Microsoft/CMake/CMake/bin/"
       - "C:/Program Files/nodejs/"
+      - "C:/Program Files/LLVM/bin/"
+      - "C:/Users/User/.cargo/bin/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Links/"
       - "C:/Users/User/AppData/Local/Programs/Zed/bin/"
@@ -720,6 +647,12 @@ events:
       - "C:/Program Files/nodejs/rc.com"
       - "C:/Program Files/nodejs/rc.exe"
       - "C:/Program Files/nodejs/rc"
+      - "C:/Program Files/LLVM/bin/rc.com"
+      - "C:/Program Files/LLVM/bin/rc.exe"
+      - "C:/Program Files/LLVM/bin/rc"
+      - "C:/Users/User/.cargo/bin/rc.com"
+      - "C:/Users/User/.cargo/bin/rc.exe"
+      - "C:/Users/User/.cargo/bin/rc"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/rc.com"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/rc.exe"
       - "C:/Users/User/AppData/Local/Microsoft/WinGet/Packages/PHP.PHP.8.5_Microsoft.Winget.Source_8wekyb3d8bbwe/rc"
@@ -779,6 +712,8 @@ events:
         - "C:\\Program Files\\GitHub CLI\\"
         - "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\bin"
         - "C:\\Program Files\\nodejs\\"
+        - "C:\\Program Files\\LLVM\\bin"
+        - "C:\\Users\\User\\.cargo\\bin"
         - "C:\\Windows\\system32"
         - "C:\\Windows"
         - "C:\\Users\\User\\AppData\\Local\\Microsoft\\WindowsApps"
@@ -802,8 +737,8 @@ events:
     checks:
       - "Detecting C compiler ABI info"
     directories:
-      source: "C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-ir80cg"
-      binary: "C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-ir80cg"
+      source: "C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-tt92vn"
+      binary: "C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-tt92vn"
     cmakeVariables:
       CMAKE_C_FLAGS: "/DWIN32 /D_WINDOWS /W3"
       CMAKE_C_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -812,40 +747,40 @@ events:
       variable: "CMAKE_C_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-ir80cg'
+        Change Dir: 'C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-tt92vn'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_f270a.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_127d9.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
-        Build started 24/02/2026 12:45:00.
+        Build started 25/02/2026 23:17:02.
         
-        Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ir80cg\\cmTC_f270a.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tt92vn\\cmTC_127d9.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_f270a.dir\\Debug\\".
+          Creating directory "cmTC_127d9.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ir80cg\\Debug\\".
-          Creating directory "cmTC_f270a.dir\\Debug\\cmTC_f270a.tlog\\".
+          Creating directory "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tt92vn\\Debug\\".
+          Creating directory "cmTC_127d9.dir\\Debug\\cmTC_127d9.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_f270a.dir\\Debug\\cmTC_f270a.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_f270a.dir\\Debug\\cmTC_f270a.tlog\\unsuccessfulbuild".
+          Creating "cmTC_127d9.dir\\Debug\\cmTC_127d9.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_127d9.dir\\Debug\\cmTC_127d9.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_f270a.dir\\Debug\\\\" /Fd"cmTC_f270a.dir\\Debug\\vc145.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_127d9.dir\\Debug\\\\" /Fd"cmTC_127d9.dir\\Debug\\vc145.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_f270a.dir\\Debug\\\\" /Fd"cmTC_f270a.dir\\Debug\\vc145.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /RTC1 /MDd /GS /fp:precise /Fo"cmTC_127d9.dir\\Debug\\\\" /Fd"cmTC_127d9.dir\\Debug\\vc145.pdb" /external:W3 /Gd /TC /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCCompilerABI.c"
           CMakeCCompilerABI.c
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ir80cg\\Debug\\cmTC_f270a.exe" /INCREMENTAL /ILK:"cmTC_f270a.dir\\Debug\\cmTC_f270a.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-ir80cg/Debug/cmTC_f270a.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-ir80cg/Debug/cmTC_f270a.lib" /MACHINE:X64  /machine:x64 cmTC_f270a.dir\\Debug\\CMakeCCompilerABI.obj
-          cmTC_f270a.vcxproj -> C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ir80cg\\Debug\\cmTC_f270a.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tt92vn\\Debug\\cmTC_127d9.exe" /INCREMENTAL /ILK:"cmTC_127d9.dir\\Debug\\cmTC_127d9.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-tt92vn/Debug/cmTC_127d9.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-tt92vn/Debug/cmTC_127d9.lib" /MACHINE:X64  /machine:x64 cmTC_127d9.dir\\Debug\\CMakeCCompilerABI.obj
+          cmTC_127d9.vcxproj -> C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tt92vn\\Debug\\cmTC_127d9.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_f270a.dir\\Debug\\cmTC_f270a.tlog\\unsuccessfulbuild".
-          Touching "cmTC_f270a.dir\\Debug\\cmTC_f270a.tlog\\cmTC_f270a.lastbuildstate".
-        Done Building Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-ir80cg\\cmTC_f270a.vcxproj" (default targets).
+          Deleting file "cmTC_127d9.dir\\Debug\\cmTC_127d9.tlog\\unsuccessfulbuild".
+          Touching "cmTC_127d9.dir\\Debug\\cmTC_127d9.tlog\\cmTC_127d9.lastbuildstate".
+        Done Building Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-tt92vn\\cmTC_127d9.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:03.65
+        Time Elapsed 00:00:02.19
         
       exitCode: 0
   -
@@ -885,8 +820,8 @@ events:
     checks:
       - "Detecting CXX compiler ABI info"
     directories:
-      source: "C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-0q0oi7"
-      binary: "C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-0q0oi7"
+      source: "C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-mzuzlw"
+      binary: "C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-mzuzlw"
     cmakeVariables:
       CMAKE_CXX_FLAGS: "/DWIN32 /D_WINDOWS /W3 /GR /EHsc"
       CMAKE_CXX_FLAGS_DEBUG: "/MDd /Zi /Ob0 /Od /RTC1"
@@ -896,40 +831,40 @@ events:
       variable: "CMAKE_CXX_ABI_COMPILED"
       cached: true
       stdout: |
-        Change Dir: 'C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-0q0oi7'
+        Change Dir: 'C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-mzuzlw'
         
-        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_62af6.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
+        Run Build Command(s): "C:/Program Files (x86)/Microsoft Visual Studio/18/BuildTools/MSBuild/Current/Bin/amd64/MSBuild.exe" cmTC_12713.vcxproj /p:Configuration=Debug /p:Platform=x64 /p:VisualStudioVersion=18.0 /v:n
         MSBuild version 18.3.0-release-26070-10+3972042b7 for .NET Framework
-        Build started 24/02/2026 12:45:06.
+        Build started 25/02/2026 23:17:06.
         
-        Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0q0oi7\\cmTC_62af6.vcxproj" on node 1 (default targets).
+        Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mzuzlw\\cmTC_12713.vcxproj" on node 1 (default targets).
         PrepareForBuild:
-          Creating directory "cmTC_62af6.dir\\Debug\\".
+          Creating directory "cmTC_12713.dir\\Debug\\".
           Structured output is enabled. The formatting of compiler diagnostics will reflect the error hierarchy. See https://aka.ms/cpp/structured-output for more details.
-          Creating directory "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0q0oi7\\Debug\\".
-          Creating directory "cmTC_62af6.dir\\Debug\\cmTC_62af6.tlog\\".
+          Creating directory "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mzuzlw\\Debug\\".
+          Creating directory "cmTC_12713.dir\\Debug\\cmTC_12713.tlog\\".
         InitializeBuildStatus:
-          Creating "cmTC_62af6.dir\\Debug\\cmTC_62af6.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
-          Touching "cmTC_62af6.dir\\Debug\\cmTC_62af6.tlog\\unsuccessfulbuild".
+          Creating "cmTC_12713.dir\\Debug\\cmTC_12713.tlog\\unsuccessfulbuild" because "AlwaysCreate" was specified.
+          Touching "cmTC_12713.dir\\Debug\\cmTC_12713.tlog\\unsuccessfulbuild".
         ClCompile:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_62af6.dir\\Debug\\\\" /Fd"cmTC_62af6.dir\\Debug\\vc145.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\CL.exe /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_12713.dir\\Debug\\\\" /Fd"cmTC_12713.dir\\Debug\\vc145.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
           Microsoft (R) C/C++ Optimizing Compiler Version 19.50.35724 for x64
           Copyright (C) Microsoft Corporation.  All rights reserved.
-          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_62af6.dir\\Debug\\\\" /Fd"cmTC_62af6.dir\\Debug\\vc145.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
+          cl /c /Zi /W3 /WX- /diagnostics:column /Od /Ob0 /D _MBCS /D WIN32 /D _WINDOWS /D "CMAKE_INTDIR=\\"Debug\\"" /EHsc /RTC1 /MDd /GS /fp:precise /GR /Fo"cmTC_12713.dir\\Debug\\\\" /Fd"cmTC_12713.dir\\Debug\\vc145.pdb" /external:W3 /Gd /TP /errorReport:queue "C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\Common7\\IDE\\CommonExtensions\\Microsoft\\CMake\\CMake\\share\\cmake-4.1\\Modules\\CMakeCXXCompilerABI.cpp"
           CMakeCXXCompilerABI.cpp
         Link:
-          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0q0oi7\\Debug\\cmTC_62af6.exe" /INCREMENTAL /ILK:"cmTC_62af6.dir\\Debug\\cmTC_62af6.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-0q0oi7/Debug/cmTC_62af6.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-0q0oi7/Debug/cmTC_62af6.lib" /MACHINE:X64  /machine:x64 cmTC_62af6.dir\\Debug\\CMakeCXXCompilerABI.obj
-          cmTC_62af6.vcxproj -> C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0q0oi7\\Debug\\cmTC_62af6.exe
+          C:\\Program Files (x86)\\Microsoft Visual Studio\\18\\BuildTools\\VC\\Tools\\MSVC\\14.50.35717\\bin\\HostX64\\x64\\link.exe /OUT:"C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mzuzlw\\Debug\\cmTC_12713.exe" /INCREMENTAL /ILK:"cmTC_12713.dir\\Debug\\cmTC_12713.ilk" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib shell32.lib ole32.lib oleaut32.lib uuid.lib comdlg32.lib advapi32.lib /MANIFEST /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /manifest:embed /DEBUG /PDB:"C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-mzuzlw/Debug/cmTC_12713.pdb" /SUBSYSTEM:CONSOLE /TLBID:1 /IMPLIB:"C:/Users/User/Documents/Programming/Assembler/build/CMakeFiles/CMakeScratch/TryCompile-mzuzlw/Debug/cmTC_12713.lib" /MACHINE:X64  /machine:x64 cmTC_12713.dir\\Debug\\CMakeCXXCompilerABI.obj
+          cmTC_12713.vcxproj -> C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mzuzlw\\Debug\\cmTC_12713.exe
         FinalizeBuildStatus:
-          Deleting file "cmTC_62af6.dir\\Debug\\cmTC_62af6.tlog\\unsuccessfulbuild".
-          Touching "cmTC_62af6.dir\\Debug\\cmTC_62af6.tlog\\cmTC_62af6.lastbuildstate".
-        Done Building Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-0q0oi7\\cmTC_62af6.vcxproj" (default targets).
+          Deleting file "cmTC_12713.dir\\Debug\\cmTC_12713.tlog\\unsuccessfulbuild".
+          Touching "cmTC_12713.dir\\Debug\\cmTC_12713.tlog\\cmTC_12713.lastbuildstate".
+        Done Building Project "C:\\Users\\User\\Documents\\Programming\\Assembler\\build\\CMakeFiles\\CMakeScratch\\TryCompile-mzuzlw\\cmTC_12713.vcxproj" (default targets).
         
         Build succeeded.
             0 Warning(s)
             0 Error(s)
         
-        Time Elapsed 00:00:02.43
+        Time Elapsed 00:00:01.81
         
       exitCode: 0
   -
