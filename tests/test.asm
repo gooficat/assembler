@@ -1,7 +1,7 @@
 globl _start
 
-extrn ExitProcess
+include "C:/Users/User/Documents/Programming/Assembler/tests/test2.asm"
 
-_start
+_start:
     mov eax, 0
     call ExitProcess

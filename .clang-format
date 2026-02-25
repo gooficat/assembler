@@ -1,0 +1,5 @@
+Language: C
+BasedOnStyle: Microsoft
+IndentWidth: 4
+UseTab: Always
+BreakBeforeBraces: Allman
