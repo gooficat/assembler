@@ -1,7 +1,0 @@
-C:\Users\User\Documents\Programming\Assembler\src\asm_unit.c;C:\Users\User\Documents\Programming\Assembler\build\Assembler.dir\Debug\asm_unit.obj
-C:\Users\User\Documents\Programming\Assembler\src\directive.c;C:\Users\User\Documents\Programming\Assembler\build\Assembler.dir\Debug\directive.obj
-C:\Users\User\Documents\Programming\Assembler\src\literal.c;C:\Users\User\Documents\Programming\Assembler\build\Assembler.dir\Debug\literal.obj
-C:\Users\User\Documents\Programming\Assembler\src\main.c;C:\Users\User\Documents\Programming\Assembler\build\Assembler.dir\Debug\main.obj
-C:\Users\User\Documents\Programming\Assembler\src\statement.c;C:\Users\User\Documents\Programming\Assembler\build\Assembler.dir\Debug\statement.obj
-C:\Users\User\Documents\Programming\Assembler\src\token_stream.c;C:\Users\User\Documents\Programming\Assembler\build\Assembler.dir\Debug\token_stream.obj
-C:\Users\User\Documents\Programming\Assembler\src\unit_pass.c;C:\Users\User\Documents\Programming\Assembler\build\Assembler.dir\Debug\unit_pass.obj
