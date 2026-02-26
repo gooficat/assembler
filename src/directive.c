@@ -21,7 +21,7 @@ Asm_Directive directives[] = {
 	{"dw", asm_directive_bytes, 2}, // word
 	{"dd", asm_directive_bytes, 4}, // dword
 	{"dq", asm_directive_bytes, 8}, // qword
-	{"do", asm_directive_bytes, 16} // oword
+
 };
 
 #define num_directives (sizeof(directives) / sizeof(Asm_Directive))
