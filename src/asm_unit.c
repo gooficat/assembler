@@ -32,3 +32,13 @@ repeat:
 		goto repeat;
 	}
 }
+
+void asm_output_bytes(Asm_Unit *unit, const void *value, int64_t num_bytes)
+{
+	if (unit->pass == ASM_UNIT_PASS_WRITE)
+	{
+		fwrite(value, sizeof(uint8_t), num_bytes, unit->out);
+	}
+
+	unit->offset += num_bytes;
+}

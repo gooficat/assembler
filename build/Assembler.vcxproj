@@ -357,6 +357,8 @@ if %errorlevel% neq 0 goto :VCEnd</Command>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\asm_unit.c" />
+    <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\directive.c" />
+    <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\literal.c" />
     <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\main.c" />
     <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\statement.c" />
     <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\token_stream.c" />

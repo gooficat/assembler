@@ -4,6 +4,12 @@
     <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\asm_unit.c">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\directive.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\literal.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
     <ClCompile Include="C:\Users\User\Documents\Programming\Assembler\src\main.c">
       <Filter>Source Files</Filter>
     </ClCompile>

@@ -36,3 +36,4 @@ typedef struct
 void asm_unit_init(Asm_Unit *unit, const char *out_path);
 void asm_unit_feed_file(Asm_Unit *unit, const char *file_path);
 void asm_unit_free(Asm_Unit *unit);
+void asm_output_bytes(Asm_Unit *unit, const void *value, int64_t num_bytes);

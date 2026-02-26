@@ -1,7 +1,3 @@
-globl _start
-
-include "C:/Users/User/Documents/Programming/Assembler/tests/test2.asm"
-
-_start:
-    mov eax, 0
-    call ExitProcess
+.db 0x01, 0x02, 0x03
+.dw 0x01, 0x02, 0x03
+.dq 0x01, 0x02, 0x03
