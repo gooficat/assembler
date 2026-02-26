@@ -13,57 +13,51 @@ typedef struct
 
 typedef enum
 {
-	Reg8  = 1,
-	Reg16 = 1 << 1,
-	Reg32 = 1 << 2,
-	Reg64 = 1 << 3,
+	BYTE  = 1,
+	WORD  = 1 << 1,
+	DWORD = 1 << 2,
+	QWORD = 1 << 3,
+	W8	  = 1 << 4,
+	W8S	  = 1 << 5,
+	W16	  = 1 << 6,
+	W32	  = 1 << 7,
+	W32S  = 1 << 8,
+	W64	  = 1 << 9,
 
-	Disp8	= 1 << 4,
-	Disp8S	= 1 << 5,
-	Disp16	= 1 << 6,
-	Disp32	= 1 << 7,
-	Disp32S = 1 << 8,
-	Disp64	= 1 << 9,
+	REG	  = 1 << 10,
+	MEM	  = 1 << 11,
+	IMM	  = 1 << 12,
+	DISP  = 1 << 13,
+	FIXED = 1 << 14,
 
-	Imm8   = 1 << 10,
-	Imm8S  = 1 << 11,
-	Imm16  = 1 << 12,
-	Imm32  = 1 << 13,
-	Imm32S = 1 << 14,
-	Imm64  = 1 << 15,
-
-	RegMem	  = 1 << 16,
-	BaseIndex = 1 << 17,
-	FixedForm = 1 << 18,
-
-	RegA   = 0 << 5,
-	RegB   = 1 << 5,
-	RegC   = 2 << 5,
-	RegD   = 3 << 5,
-	RegSP  = 4 << 5,
-	RegBP  = 5 << 5,
-	RegSI  = 6 << 5,
-	RegDI  = 7 << 5,
-	RegR8  = 8 << 5,
-	RegR9  = 9 << 5,
-	RegR10 = 10 << 5,
-	RegR11 = 11 << 5,
-	RegR12 = 12 << 5,
-	RegR13 = 13 << 5,
-	RegR14 = 14 << 5,
-	RegR15 = 15 << 5,
+	REG_A	= 0,
+	REG_C	= 1,
+	REG_D	= 2,
+	REG_B	= 3,
+	REG_SP	= 4,
+	REG_BP	= 5,
+	REG_SI	= 6,
+	REG_DI	= 7,
+	REG_R8	= 8,
+	REG_R9	= 9,
+	REG_R10 = 10,
+	REG_R11 = 11,
+	REG_R12 = 12,
+	REG_R13 = 13,
+	REG_R14 = 14,
+	REG_R15 = 15,
 } Asm_Param;
 
 typedef enum
 {
-	NeedsRex		   = 1 << 0,
-	NeedsModRM		   = 1 << 1,
-	FieldD			   = 1 << 2,
-	FieldW			   = 1 << 3,
-	RelativeAddressing = 1 << 4,
-	Mode16			   = 1 << 5,
-	Mode32			   = 1 << 6,
-	Mode64			   = 1 << 7,
+	NEED_REX   = 1 << 0,
+	NEED_MODRM = 1 << 1,
+	FIELD_D	   = 1 << 2,
+	FIELD_W	   = 1 << 3,
+	REL_ADDR   = 1 << 4,
+	MODE_16	   = 1 << 5,
+	MODE_32	   = 1 << 6,
+	MODE_64	   = 1 << 7,
 } Asm_Opcode_Flags;
 
 #define ASM_MAX_OPCODES 4
@@ -71,7 +65,7 @@ typedef enum
 typedef struct
 {
 	uint8_t			 opcodes[ASM_MAX_OPCODES];
-	uint8_t num_opcodes;
+	uint8_t			 num_opcodes;
 	Asm_Opcode_Flags flags;
 	Asm_Param		 params[ASM_MAX_ARGUMENTS];
 } Asm_Opcode;
