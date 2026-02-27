@@ -3,6 +3,7 @@
 #include "opcodes.h"
 #include "register.h"
 #include "token_stream.h"
+#include <stdint.h>
 #include <string.h>
 
 Asm_Register *find_register(const char *name)
@@ -46,47 +47,67 @@ void asm_parse_argument(Asm_Unit *unit, Asm_Argument *argument)
 	}
 	else
 	{
+		argument->type = ASM_ARGUMENT_MEMORY;
 		if (unit->stream.buffer[0] != '[')
 		{
-			argument->mem.offset = 0;
+			argument->mem.offset = asm_parse_literal(unit);
 		}
 		else
 		{
-			argument->mem.offset = asm_parse_literal(unit);
+			argument->mem.offset = 0;
+		}
+		if (unit->stream.buffer[0] == '[')
+		{
 			token_stream_next(&unit->stream);
-			if (unit->stream.buffer[0] == ']')
+			if (unit->stream.buffer[0] == '%')
 			{
-				argument->mem.base	= NULL;
-				argument->mem.index = NULL;
-				// argument->mem.scale = 0;
-			}
-			else if (unit->stream.buffer[0] != ',')
-			{
+				token_stream_next(&unit->stream);
 				argument->mem.base = find_register(unit->stream.buffer);
 				token_stream_next(&unit->stream);
-				if (unit->stream.buffer[0] == ']')
-				{
-					argument->mem.index = NULL;
-					// argument->mem.scale = 0;
-				}
-				else if (unit->stream.buffer[0] == ',')
+			}
+			else
+			{
+				argument->mem.base = NULL;
+			}
+			if (unit->stream.buffer[0] == ',')
+			{
+				token_stream_next(&unit->stream);
+				if (unit->stream.buffer[0] == '%')
 				{
 					token_stream_next(&unit->stream);
 					argument->mem.index = find_register(unit->stream.buffer);
 					token_stream_next(&unit->stream);
-					if (unit->stream.buffer[0] == ']')
-					{
-						argument->mem.scale = 1;
-					}
-					else if (unit->stream.buffer[0] == ',')
+					if (unit->stream.buffer[0] == ',')
 					{
 						token_stream_next(&unit->stream);
-						argument->mem.scale = asm_parse_literal(unit);
+						if (unit->stream.buffer[0] != ']')
+						{
+							argument->mem.scale = (uint8_t)asm_parse_literal(unit);
+						}
+						else
+						{
+							argument->mem.scale = 0;
+						}
+					}
+					else
+					{
+						argument->mem.scale = 0;
 					}
 				}
+				else
+				{
+					argument->mem.index = NULL;
+					argument->mem.scale = 0;
+				}
 			}
+			else
+			{
+				argument->mem.index = NULL;
+				argument->mem.scale = 0;
+			}
+
+			token_stream_next(&unit->stream);
 		}
-		token_stream_next(&unit->stream);
 	}
 }
 
@@ -129,9 +150,8 @@ void asm_handle_instruction(Asm_Unit *unit)
 			printf("Memory %lld[", arg->mem.offset);
 			if (arg->mem.base)
 			{
-				printf("%s", arg->mem.base->name);
+				printf("%s, ", arg->mem.base->name);
 			}
-			printf(", ");
 			if (arg->mem.index)
 			{
 				printf("%s, %hhu", arg->mem.index->name, arg->mem.scale);
