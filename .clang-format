@@ -7,3 +7,7 @@ BreakBeforeBraces: Allman
 AlignConsecutiveDeclarations: true
 AlignConsecutiveAssignments: true
 AlignConsecutiveMacros: true
+
+BinPackParameters: false
+BinPackArguments: false
+ColumnLimit: 0

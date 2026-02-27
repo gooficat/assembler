@@ -1,5 +1,6 @@
 #pragma once
 
+#include "asm_unit.h"
 #include "opcodes.h"
 #include "register.h"
 
@@ -15,8 +16,8 @@ typedef struct
 {
 	const Asm_Register *base;
 	const Asm_Register *index;
-	uint8_t scale;
-	int64_t offset;
+	uint8_t				scale;
+	int64_t				offset;
 } Asm_Memory_Argument;
 
 typedef struct
@@ -25,7 +26,7 @@ typedef struct
 	union
 	{
 		const Asm_Register *reg;
-		int64_t imm;
+		int64_t				imm;
 		Asm_Memory_Argument mem;
 	};
 } Asm_Argument;
@@ -35,5 +36,7 @@ typedef struct
 typedef struct
 {
 	Asm_Opcode_Class *opcode_class;
-	Asm_Argument arguments[ASM_MAX_ARGUMENTS];
+	Asm_Argument	  arguments[ASM_MAX_ARGUMENTS];
 } Asm_Instruction;
+
+void asm_handle_instruction(Asm_Unit *unit);
