@@ -23,6 +23,6 @@ void asm_unit_pass(Asm_Unit *unit)
 	{
 		asm_handle_statement(unit);
 	}
-
+	puts("Unit pass done");
 	unit->pass = unit->pass_next;
 }

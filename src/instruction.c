@@ -34,13 +34,15 @@ void asm_parse_argument(Asm_Unit *unit, Asm_Argument *argument)
 	if (unit->stream.buffer[0] == '%')
 	{
 		argument->type = ASM_ARGUMENT_REGISTER;
-		argument->reg  = find_register(unit->stream.buffer);
+		token_stream_next(&unit->stream);
+		argument->reg = find_register(unit->stream.buffer);
 		token_stream_next(&unit->stream);
 	}
 	else if (unit->stream.buffer[0] == '$')
 	{
 		argument->type = ASM_ARGUMENT_IMMEDIATE;
-		argument->imm  = asm_parse_literal(unit);
+		token_stream_next(&unit->stream);
+		argument->imm = asm_parse_literal(unit);
 	}
 	else
 	{
@@ -94,7 +96,7 @@ void asm_parse_instruction(Asm_Unit *unit, Asm_Instruction *instruction)
 	token_stream_next(&unit->stream);
 	int i = 0;
 repeat:
-	if (unit->stream.buffer[0] && unit->stream.buffer[0] != '.' && unit->stream.file_state.C != ':')
+	if (unit->stream.buffer[0] != '\0' && unit->stream.buffer[0] != '.' && unit->stream.file_state.C != ':')
 	{
 		asm_parse_argument(unit, &instruction->arguments[i++]);
 		if (unit->stream.buffer[0] == ',')
@@ -103,6 +105,7 @@ repeat:
 			goto repeat;
 		}
 	}
+	instruction->arguments[i].type = ASM_ARGUMENT_NONE;
 }
 
 void asm_handle_instruction(Asm_Unit *unit)
@@ -110,7 +113,7 @@ void asm_handle_instruction(Asm_Unit *unit)
 	Asm_Instruction instruction;
 	asm_parse_instruction(unit, &instruction);
 	printf("Instruction: %s\n", instruction.opcode_class->name);
-	for (size_t i = 0; i < ASM_MAX_ARGUMENTS; i++)
+	for (size_t i = 0; i < ASM_MAX_ARGUMENTS && instruction.arguments[i].type != ASM_ARGUMENT_NONE; i++)
 	{
 		Asm_Argument *arg = &instruction.arguments[i];
 		printf("Argument %zu: ", i);
@@ -136,8 +139,9 @@ void asm_handle_instruction(Asm_Unit *unit)
 			puts("]");
 			break;
 		default:
-			goto break_out;
+			printf("None (%d)\n", arg->type);
+			break;
 		}
 	}
-break_out:;
+	puts("End of instruction");
 }

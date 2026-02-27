@@ -1,3 +1,2 @@
 .db 0x01, 0x02, 0x03 + 0x41
-add rax, 67
-add rax, 32[rcx, rdx, 2]
+add %rax, $64
